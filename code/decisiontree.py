@@ -5,7 +5,7 @@ from sklearn.tree import DecisionTreeClassifier
 from scipy.sparse import lil_matrix
 from sklearn.feature_extraction.text import TfidfTransformer
 
-# Performs classification using Decision Tree.
+# Performs classification using the Decision Tree.
 
 FREQ_DIST_FILE = '../dataset/train-processed-freqdist.pkl'
 BI_FREQ_DIST_FILE = '../dataset/train-processed-freqdist-bi.pkl'
