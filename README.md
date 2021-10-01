@@ -15,3 +15,5 @@ Words and emoticons contribute to predicting the sentiment, but URLs and referen
 people don’t. Therefore, URLs and references can be ignored. The words are also a mixture
 of misspelled words, extra punctuations, and words with many repeated letters. The tweets,
 therefore, have to be preprocessed to standardize the dataset
+
+![image](https://user-images.githubusercontent.com/72199738/135661532-ea0c08fe-8671-4bce-888b-41102105a68f.png)
