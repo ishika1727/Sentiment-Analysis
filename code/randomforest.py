@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 from scipy.sparse import lil_matrix
 from sklearn.feature_extraction.text import TfidfTransformer
 
-# Performs classification using RandomForest classifier.
+# Performs classification using RandomForest classifier .
 
 FREQ_DIST_FILE = '../dataset/train-processed-freqdist.pkl'
 BI_FREQ_DIST_FILE = '../dataset/train-processed-freqdist-bi.pkl'
@@ -101,7 +101,7 @@ def process_tweets(csv_file, test_file=True):
             else:
                 tweets.append((tweet_id, int(sentiment), feature_vector))
             utils.write_status(i + 1, total)
-    print ('\n')
+    print ('\n ')
     return tweets
 
 
@@ -117,7 +117,7 @@ if __name__ == '__main__':
         random.shuffle(tweets)
         train_tweets = tweets
     del tweets
-    print ('Extracting features & training batches')
+    print ('Extracting features and training batches \n')
     clf = RandomForestClassifier(n_jobs=2, random_state=0)
     batch_size = len(train_tweets)
     i = 1
@@ -143,7 +143,7 @@ if __name__ == '__main__':
             correct += np.sum(prediction == val_set_y)
             utils.write_status(i, n_val_batches)
             i += 1
-        print ('\nCorrect: %d/%d = %.4f %%' % (correct, total, correct * 100. / total))
+        print ('\nCorrectness: %d/%d = %.4f %%' % (correct, total, correct * 100. / total))
     else:
         del train_tweets
         test_tweets = process_tweets(TEST_PROCESSED_FILE, test_file=True)
