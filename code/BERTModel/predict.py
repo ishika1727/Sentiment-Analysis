@@ -49,6 +49,8 @@ def predict(sentence, model, device):
 if __name__ == "__main__":
     model = BERTBaseUncased()
     model.load_state_dict(torch.load(PATH))
+    model.to(config.DEVICE)
 
     sentence = "I love the weather but hated the concert"
-    predict(sentence, model, device="cuda")
+    prediction = predict(sentence, model, device=config.DEVICE)
+    print(prediction)
